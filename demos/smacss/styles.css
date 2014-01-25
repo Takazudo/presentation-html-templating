@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../common/styles.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="all">
+
+<h1>BEM demo</h1>
+
+<h2>column block</h2>
+
+<div class="moduleWrap">
+
+  <section class="column">
+    <h1 class="column__hd">About BEM</h1>
+    <div class="column__bd">
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+    </div>
+  </section>
+
+</div>
+
+<h2>column__state_disabled</h2>
+
+<div class="moduleWrap">
+
+  <section class="column column__state_disabled">
+    <h1 class="column__hd">Dangereous area!</h1>
+    <div class="column__bd">
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+    </div>
+  </section>
+
+</div>
+
+<h2>column__type_caution</h2>
+
+<div class="moduleWrap">
+
+  <section class="column column__type_caution">
+    <h1 class="column__hd">Dangereous area!</h1>
+    <div class="column__bd">
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+      <p class="column__bd__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+    </div>
+  </section>
+
+</div>
+
+<h2>img-column block</h2>
+
+<div class="moduleWrap">
+
+  <section class="img-column">
+    <h1 class="img-column__hd">About BEM</h1>
+    <div class="img-column__bd">
+      <div class="img-column__bd__img-container">
+        <div class="graph">
+          <div class="graph__hd">Sales chart</div>
+          <div class="graph__bd"><img class="graph__bd__img" src="imgs/graph.png" alt=""></div>
+          <div class="graph__ft">The sales is so good. The sales is so good. The sales is so good. The sales is so good. </div>
+        </div>
+      </div>
+      <div class="img-column__bd__text">
+        <p class="img-column__bd__text__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+        <p class="img-column__bd__text__p">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<h2>graph block</h2>
+
+<div class="moduleWrap" style="width:134px">
+
+  <div class="graph">
+    <div class="graph__hd">Sales chart</div>
+    <div class="graph__bd"><img class="graph__bd__img" src="imgs/graph.png" alt=""></div>
+    <div class="graph__ft">The sales is so good. The sales is so good. The sales is so good. The sales is so good. </div>
+  </div>
+
+</div>
+
+</div></body>
+</html>
