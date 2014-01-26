@@ -1,0 +1,12 @@
+.reveal section img {
+  margin: 15px 0px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.reveal section .my-img {
+  padding:10px 0;
+}
+.reveal section .my-img img {
+  margin: 0;
+}

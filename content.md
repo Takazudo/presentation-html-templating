@@ -4,468 +4,199 @@
 
 ----
 
-## super simple example
+# OOCSS
 
-```
-<span class="icon-face-cool"></span>
-<span class="icon-face-sad"></span>
-<span class="icon-face-wink"></span>
-```
+----
+
+## OOCSSとは
+
+* Object Oriented CSS
+* Nicole Sullivan (YAHOO!)
+* オブジェクト指向っぽく考えて整理しよう
+* レゴみたいに組み合わせてページをつくろう
+
+----
+
+## こういうのがダメ
+
+図
 
 ---
 
-## SCSS
+```
+#main h2 {
+  ...
+}
+#main .contact .header h2 {
+  ...
+}
+#sidebar h2 {
+  ...
+}
+```
+
+----
+
+## なぜダメか
+
+* 上書き合戦になってしまう
+* 同じ部品を使いまわせない
+* 詳細度を気にしないといけなくなる
+* `!important`だらけになる
+* 結果的にパフォーマンス落ちる
+
+---
 
 ```
-@import "icon/*.png";
-@include all-icon-sprites;
+#main h2 { ...  }
+#main .contact .header h2 { ...  }
+#sidebar h2 { ...  }
+#sidebar .nav2 h2 { ...  }
+#sidebar .related .header h2 { ...  }
+#main .related h2 { ...  }
+#main .anotherTitle h2 { ...  }
+#main .anotherHeadingWrap h2 { ...  }
+```
 
-.icon-face-cool { width:48px; height:48px; }
-.icon-face-sad { width:48px; height:48px; }
-.icon-face-wink { width:128px; height:128px; }
+----
 
-// デバッグ用
+## レゴみたいに考える
 
-span {
-  display:inline-block;
+図
+
+---
+
+## 一つ一つがレゴのパーツ
+
+```
+.heading {
+  ...
+}
+.heading2 {
+  ...
+}
+.heading3 {
+  ...
+}
+.heading4 {
+  ...
+}
+```
+
+レゴの部品: CSS Object
+
+---
+
+図
+
+----
+
+## スキン
+
+* プログラムでいう「継承」と近い概念
+* 共通項目を一つのモジュールに定義
+* バリエーションをスキンとして定義
+* マルチクラスで実装
+
+---
+
+図
+
+---
+
+図
+
+---
+
+<div class="my-img"><img src="img/button_base.png" alt=""></div>
+
+```
+<span class="button">Button!!</span>
+```
+
+```
+.button {
+  font-size:1.5em;
+  padding:.5em 2em .4em;
   border:3px solid #000;
-}
-```
-
-```
-$ compass compile
-```
-
----
-
-## Sprite!!!
-
-![](demo/ex01-simple/images/icon-s51e5ca4f42.png)
-
----
-
-## CSS!!!
-
-```
-.icon-sprite, .icon-face-cool, .icon-face-sad, .icon-face-wink {
-  background: url('../images/icon-s51e5ca4f42.png') no-repeat;
-}
-
-.icon-face-cool {
-  background-position: 0 -128px;
-}
-
-.icon-face-sad {
-  background-position: 0 -176px;
-}
-
-.icon-face-wink {
-  background-position: 0 0;
-}
-
-.icon-face-cool {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-face-sad {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-face-wink {
-  width: 128px;
-  height: 128px;
-}
-
-span {
-  display: inline-block;
-  border: 3px solid #000;
+  border-radius:10px;
 }
 ```
 
 ---
 
-## Demo!!!
-
-* [demo](demo/ex01-simple/html/1.html)
-
-----
-
-## 2 sprites example
+<div class="my-img"><img src="img/button_caution.png" alt=""></div>
 
 ```
-<span class="face-cool"></span>
-<span class="face-sad"></span>
-<span class="face-wink"></span>
-<span class="audio-headset"></span>
-<span class="audio-keyboard"></span>
-<span class="audio-speaker"></span>
+<span class="button caution">Caution!!</span>
+```
+
+```
+.caution {
+  font-weight:bold;
+  color:#fff;
+  background:#FD3636;
+  border-color:#BC2828;
+}
 ```
 
 ---
 
-## SCSS
+<div class="my-img"><img src="img/button_pdf.png" alt=""></div>
 
 ```
-@import "icon/audio/*.png";
-@import "icon/face/*.png";
-@include all-audio-sprites;
-@include all-face-sprites;
+<span class="button pdf">Download PDF!!</span>
+```
 
-.face-cool { width:48px; height:48px; }
-.face-sad { width:48px; height:48px; }
-.face-wink { width:128px; height:128px; }
-.audio-headset { width:128px; height:128px; }
-.audio-keyboard { width:128px; height:128px; }
-.audio-speaker { width:32px; height:32px; }
-
-// デバッグ用
-
-span {
+```
+.pdf {
+  background:#ECE4AB;
+  border-color:#D9D29E;
+  padding-left:1.5em;
+}
+.pdf:before {
+  content: '';
   display:inline-block;
-  border:3px solid #000;
-}
-```
-
-```
-$ compass compile
-```
-
----
-
-## Sprites!!!
-
-![](demo/ex02-2sprite-maps/images/icon/face-s820149b219.png) ![](demo/ex02-2sprite-maps/images/icon/audio-sf2be771957.png)
-
----
-
-### CSS!!!
-
-```
-.audio-sprite, .audio-headset, .audio-keyboard, .audio-speaker {
-  background: url('../images/icon/audio-sf2be771957.png') no-repeat;
-}
-
-.face-sprite, .face-cool, .face-sad, .face-wink {
-  background: url('../images/icon/face-s820149b219.png') no-repeat;
-}
-
-.audio-headset {
-  background-position: 0 0;
-}
-
-.audio-keyboard {
-  background-position: 0 -128px;
-}
-
-.audio-speaker {
-  background-position: 0 -256px;
-}
-
-.face-cool {
-  background-position: 0 -128px;
-}
-
-.face-sad {
-  background-position: 0 -176px;
-}
-
-.face-wink {
-  background-position: 0 0;
-}
-
-.face-cool {
-  width: 48px;
-  height: 48px;
-}
-
-.face-sad {
-  width: 48px;
-  height: 48px;
-}
-
-.face-wink {
-  width: 128px;
-  height: 128px;
-}
-
-.audio-headset {
-  width: 128px;
-  height: 128px;
-}
-
-.audio-keyboard {
-  width: 128px;
-  height: 128px;
-}
-
-.audio-speaker {
-  width: 32px;
-  height: 32px;
-}
-
-span {
-  display: inline-block;
-  border: 3px solid #000;
+  width:22px;
+  height:22px;
+  background:url(imgs/acrobat.png);
+  vertical-align:-2px;
+  margin:0 6px 0 0;
 }
 ```
 
 ---
 
-## Demo
-
-* [demo](demo/ex02-2sprite-maps/html/1.html)
-
-----
-
-## width, height example
+<div class="my-img"><img src="img/button_play.png" alt=""></div>
 
 ```
-$icon-sprite-dimensions: true;
-
-@import "icon/*.png";
-@include all-icon-sprites;
+<span class="button play">Play sound!!</span>
 ```
 
----
-
-## Demo
-
-* [demo](demo/ex04-width-height/html/1.html)
-
-----
-
-## Configurable variables example
-
-Configure before `@import`.
-
 ```
-// widthとheightも出力するか
-$icon-sprite-dimensions: true;
-
-// 画像間の隙間
-$icon-spacing: 20px;
-
-// X軸方向に繰り返すか
-$icon-repeat: repeat-x;
-
-// スプライトのベースクラス
-$icon-sprite-base-class: '.myicon';
-
-// 新しくスプライトが作られた時に古いものを削除するか
-$icon-clean-up: true;
-
-// スプライトの処理
-@import "icon/*.png";
-@include all-icon-sprites;
-```
-
----
-
-### Sprite!!!
-
-![](demo/ex05-configuration/images/icon-s8f80a2636f.png)
-
-----
-
-## Layout example
-
-```
-$icon-layout: smart; // THIS!!!
-
-@import "icon/*.png";
-@include all-icon-sprites;
-```
-
----
-
-### vertical (default)
-
-![](demo/ex06-layout/images/vertical.png)
-
----
-
-### horizontal
-
-![](demo/ex06-layout/images/horizontal.png)
-
----
-
-### smart
-
-![](demo/ex06-layout/images/smart.png)
-
----
-
-### diagonal
-
-![](demo/ex06-layout/images/diagonal.png)
-
-----
-
-## One by one example
-
-```
-<div class="faces">
-  <span class="cool"></span>
-  <span class="sad"></span>
-  <span class="wink"></span>
-</div>
-```
-
----
-
-### SCSS!!!
-
-```
-@import "icon/*.png";
-
-.faces {
-  .cool {
-    @include icon-sprite(face-cool);
-    width:48px;
-    height:48px;
-  }
-  .sad {
-    @include icon-sprite(face-sad);
-    width:48px;
-    height:48px;
-  }
-  .wink {
-    @include icon-sprite(face-wink);
-    width:128px;
-    height:128px;
-  }
+.play {
+  background:#C3E6EA;
+  border-color:#AECDD0;
+  padding-left:1.5em;
 }
-
-// デバッグ用
-
-span {
+.play:before {
+  content: '';
   display:inline-block;
-  border:3px solid black;
+  width:22px;
+  height:22px;
+  background:url(imgs/play.png);
+  vertical-align:-2px;
+  margin:0 6px 0 0;
 }
 ```
-
----
-
-### Demo!!!
-
-* [demo](demo/ex03-custom-selector/html/1.html)
 
 ----
 
-## Magic selectors example
-
-```
-<a href="#"></a>
-```
-
----
-
-### SCSS!
-
-```
-$button-sprite-dimensions: true;
-@import "button/*.png";
-
-a {
-  display:block;
-  border:3px solid #6EA56E;
-  @include button-sprite(pushme);
-}
-```
-
----
-
-### images I prepared
-
-* `pushme.png`&nbsp;&nbsp;&nbsp;<img src="demo/ex07-magic-selectors/images/button/pushme.png" style="vertical-align:middle" alt="">
-* `pushme_hover.png`&nbsp;&nbsp;&nbsp;<img src="demo/ex07-magic-selectors/images/button/pushme_hover.png" style="vertical-align:middle" alt="">
-* `pusme_active.png`&nbsp;&nbsp;&nbsp;<img src="demo/ex07-magic-selectors/images/button/pushme_active.png" style="vertical-align:middle" alt="">
-* `pushme_target.png`&nbsp;&nbsp;&nbsp;<img src="demo/ex07-magic-selectors/images/button/pushme_target.png" style="vertical-align:middle" alt="">
-
----
-
-### CSS!!!
-
-```
-.button-sprite, a {
-  background: url('../images/button-s42f973137b.png') no-repeat;
-}
-
-a {
-  display: block;
-  border: 3px solid #6EA56E;
-  background-position: 0 -80px;
-  height: 40px;
-  width: 150px;
-}
-a:hover, a.pushme_hover, a.pushme-hover {
-  background-position: 0 -160px;
-}
-a:target, a.pushme_target, a.pushme-target {
-  background-position: 0 -40px;
-}
-a:active, a.pushme_active, a.pushme-active {
-  background-position: 0 0;
-}
-```
-
----
-
-### Demo!!!
-
-* [demo](demo/ex07-magic-selectors/html/1.html)
+# BEM
 
 ----
 
-## Helpers example
-
-```
-<span class="icon-face-cool"></span>
-<span class="icon-face-wink"></span>
-```
-
----
-
-### SCSS
-
-```
-$icon: sprite-map("icon/*.png", $layout: smart);
-
-.icon-face-cool {
-  // spriteのURLを取得
-  background-image: sprite-url($icon);
-  // spriteの中から、face-coolのpositionを取得
-  background-position: sprite-position($icon, face-cool);
-  // face-coolのspriteの幅を取得
-  width: image-width(sprite-file($icon, face-cool));
-  // face-coolのspriteの高さを取得
-  height: image-height(sprite-file($icon, face-cool));
-}
-
-.icon-face-wink {
-  // face-winkの情報をまとめて取得
-  background: sprite($icon, face-wink);
-  // face-winkのspriteの幅を取得
-  width: image-width(sprite-file($icon, face-wink));
-  // face-winkのspriteの高さを取得
-  height: image-height(sprite-file($icon, face-wink));
-}
-
-// デバッグ用
-span {
-  display:inline-block;
-  border:3px solid black;
-}
-```
-
----
-
-### Demo!!!
-
-* [demo](demo/ex08-helpers/html/1.html)
+# SMACSS
 
 ----
 
