@@ -16,11 +16,11 @@
       padding:0 0 1em;
     }
 
-.column__state_disabled {
+.column_state_disabled {
   opacity:.3;
 }
 
-.column__type_caution {
+.column_type_caution {
   background:#EA3B3B;
 }
 
@@ -34,6 +34,9 @@
   }
     .graph__bd__img {
       border:2px solid #000;
+    }
+    .graph__bd__img_type_important {
+      border-color:red;
     }
   .graph__ft {
     font-size:.8em;

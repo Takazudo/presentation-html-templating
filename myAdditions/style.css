@@ -1,3 +1,33 @@
+.reveal .slides>section,
+.reveal .slides>section>section {
+  padding:0;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  *font-family:'ＭＳ Ｐゴシック', sans-serif;
+  text-transform: none;
+  font-weight:bold;
+}
+
+.reveal code {
+  font-family: 'Courier New', monospace;
+}
+
+.reveal h1 {
+  font-size:1.8em;
+}
+
+.reveal section p:last-child {
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
 .reveal section img {
   margin: 15px 0px;
   background: none;
@@ -10,3 +40,35 @@
 .reveal section .my-img img {
   margin: 0;
 }
+.reveal section table {
+  margin:0 auto;
+}
+.reveal section table th {
+  vertical-align:middle;
+  text-align:right;
+  font-size:.8em;
+  padding:0 15px 0 0;
+}
+.reveal section table td {
+  vertical-align:middle;
+  text-align:left;
+  padding:10px 0;
+}
+.reveal section table td img {
+  margin:0;
+}
+
+.reveal section ul {
+  line-height: 1.4;
+}
+
+.reveal section ul.bigList {
+  font-size:2.5em;
+  line-height:1.3;
+  padding:0;
+  margin:0;
+}
+  .reveal section ul.bigList li {
+    padding:0;
+    margin:.5em;
+  }

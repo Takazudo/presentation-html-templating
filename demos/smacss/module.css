@@ -11,7 +11,7 @@
   .column-bd {
     padding:1em 20px 0;
   }
-    .column-bd p {
+    .column-bd > p {
       margin:0;
       padding:0 0 1em;
     }

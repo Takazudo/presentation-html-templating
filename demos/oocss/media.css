@@ -18,40 +18,40 @@
       padding:1em 0 0;
     }
 
-.comment-tier1 {
+.comment-lv1 {
   border-bottom:2px dashed #333;
   padding-bottom:1.5em;
   margin-bottom:1.5em;
 }
-  .comment-tier1 > .img img {
+  .comment-lv1 > .img img {
     width:80px;
     height:80px;
   }
 
-.comment-tier2 {
+.comment-lv2 {
   margin-top:1em;
   margin-bottom:0;
   padding-top:1em;
   padding-bottom:0;
   border-top:1px dashed #333;
 }
-  .comment-tier2 > .img img {
+  .comment-lv2 > .img img {
     width:50px;
     height:50px;
   }
-  .comment-tier2 > .bd > .txt{
+  .comment-lv2 > .bd > .txt{
     font-size:.8em;
   }
 
-.comment-tier3 {
+.comment-lv3 {
   margin-top:1em;
   padding-top:1em;
   border-top:1px dashed #333;
 }
-  .comment-tier3 > .img img {
+  .comment-lv3 > .img img {
     width:50px;
     height:50px;
   }
-  .comment-tier3 > .bd > .txt{
+  .comment-lv3 > .bd > .txt{
     font-size:.75em;
   }
