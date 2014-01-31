@@ -4,6 +4,10 @@
 
 ----
 
+自己紹介とか（後で）
+
+----
+
 <ul class="bigList">
 <li>OOCSS</li>
 <li>BEM</li>
@@ -715,6 +719,10 @@ CSSルールを次の5つに分けて考える
 
 ※テーマについては今回は省略
 
+---
+
+<div class="my-img"><img src="img/smacss-structure.png" alt=""></div>
+
 ----
 
 ### Base - ベースルール
@@ -1093,7 +1101,103 @@ th, td {
 
 ----
 
-## extend
+## @extend
+
+<div class="my-img"><img src="img/oocss-skin/2.png" alt=""></div>
+
+---
+
+<div class="my-img"><img src="img/button_base.png" alt=""></div>
+
+```
+<span class="button">Button!!</span>
+```
+
+```
+.button {
+  font-size:1.5em;
+  padding:.5em 2em .4em;
+  border:3px solid #000;
+  border-radius:10px;
+}
+```
+
+---
+
+#### OOCSSでは……
+
+<div class="my-img"><img src="img/button_caution.png" alt=""></div>
+
+```
+<span class="button caution">Caution!!</span>
+```
+
+```
+.caution {
+  font-weight:bold;
+  color:#fff;
+  background:#FD3636;
+  border-color:#BC2828;
+}
+```
+
+スキン → マルチクラスで実装してた
+
+---
+
+#### BEMでは……
+
+```
+<span class="button button_type_caution">Caution!!</span>
+```
+
+Modifier → マルチクラス
+
+<div style="height:30px"></div>
+
+#### SMACSSでは……
+
+```
+<span class="button button-caution">Caution!!</span>
+```
+
+サブクラス → マルチクラス
+
+---
+
+#### Sassなら……
+
+```
+<span class="button">Button!!</span>
+<span class="button-caution">Caution!!</span>
+```
+
+```
+.button {
+  font-size:1.5em;
+  padding:.5em 2em .4em;
+  border:3px solid #000;
+  border-radius:10px;
+}
+
+.button-caution {
+  @extend .button;
+  font-weight:bold;
+  color:#fff;
+  background:#FD3636;
+  border-color:#BC2828;
+}
+```
+
+---
+
+### @extendのすごい点
+
+* スキンのような概念を表現する方法が無かった
+* マルチクラスを利用するしか無かった
+* 見栄えの情報がHTMLに内包されていることに？
+* プリプロセッサの過程を経ることでその問題を解決
+
 
 ----
 
@@ -1112,15 +1216,17 @@ by BEM
 
 ----
 
-続きは[CodeGrid](https://app.codegrid.net/)で
+* モジュール一覧とかがあるとなお良い
+* あーこの人の考えてること分かるわー<br>と思われるCSSを書こう
+* 1ヶ月後の自分は既に他人である
 
 ----
 
-# ボツ
+# 以下ボツ
 
 ----
 
-## Blockの入れ子
+## BEM - Blockの入れ子
 
 ![](img/bem-exp/10.png)
 
@@ -1197,5 +1303,3 @@ by BEM
 * それぞれのBlockを別々につくる
 * 別のBlockを入れるElementを用意する
 * クラス名で全部スタイル当ててるので<br>崩れたりしない
-
-----
