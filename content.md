@@ -115,6 +115,10 @@
 
 レゴの部品: CSS Object
 
+---
+
+<div class="my-img"><img src="img/oocss-module/3.png" alt=""></div>
+
 ----
 
 ## スキン
@@ -709,6 +713,8 @@ CSSルールを次の5つに分けて考える
 * **State** - 状態（ステート）ルール
 * **Theme** - テーマ
 
+※テーマについては今回は省略
+
 ----
 
 ### Base - ベースルール
@@ -993,7 +999,7 @@ th, td {
 
 ---
 
-<div class="my-img"><img src="img/bem-exp/block-exp.png" alt=""></div>
+<div class="my-img"><img src="img/smacss-exp/module.png" alt=""></div>
 
 ```
 <section class="column">
@@ -1083,6 +1089,14 @@ th, td {
 
 ----
 
+## Sassをどう活かす？
+
+----
+
+## extend
+
+----
+
 ## まとめ
 
 ----
@@ -1095,10 +1109,6 @@ th, td {
 * コードの再利用を可能にできる
 
 by BEM
-
-----
-
-## Sassをどう活かす？
 
 ----
 
