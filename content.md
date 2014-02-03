@@ -4,7 +4,16 @@
 
 ----
 
-自己紹介とか（後で）
+## 自己紹介
+
+* 高津戸 壮（たかつど たけし）
+* [株式会社ピクセルグリッド](http://www.pxgrid.com/)
+* フロントエンドエンジニア
+* [@Takazudo](twitter.com/Takazudo)
+
+---
+
+<div class="my-img"><img src="img/intro/jqbook.png" alt=""></div>
 
 ----
 
@@ -1219,6 +1228,41 @@ by BEM
 * モジュール一覧とかがあるとなお良い
 * あーこの人の考えてること分かるわー<br>と思われるCSSを書こう
 * 1ヶ月後の自分は既に他人である
+
+----
+
+## 宣伝
+
+----
+
+<img src="img/codegrid/1.png" alt="" style="border:3px solid #000;">
+
+---
+
+## CodeGrid
+
+* ピクセルグリッドの技術情報配信サービス
+* フロントエンド周りの情報メイン
+* 月額840円
+* バックナンバーも全部読める
+
+---
+
+### CSS関する過去配信シリーズ
+
+* CSSの設計
+* SassとCSS設計
+* BEMによるフロントエンドの設計
+* SMACSSによるCSSの設計
+* RWDに効くCSSテクニック
+* 賢く使うStyleDocco導入ガイド
+* 生きたスタイルガイドのためのKSS
+
+などなど
+
+---
+
+## [www.codegrid.net](http://www.codegrid.net)
 
 ----
 
