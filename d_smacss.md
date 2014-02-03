@@ -262,7 +262,7 @@ th, td {
 
 ---
 
-<div class="my-img"><img src="img/smacss-exp/layout3.png" alt=""></div>
+<div class="my-img"><img src="img/smacss-exp/layout3ex.png" alt=""></div>
 
 ---
 

@@ -29,6 +29,8 @@
 #sidebar h2 {
   ...
 }
+.somewhere .title h2 {
+}
 ```
 
 場所の名前に依存してスタイルを当てる
@@ -57,7 +59,7 @@
 
 ---
 
-### !important
+### `!important`
 
 ![](img/cssfail/4.png)
 
@@ -85,18 +87,38 @@
 ---
 
 ```
+/* heading module */
+
 .heading {
-  ...
+  prop: val;
 }
+
+/* heading2 module */
+
 .heading2 {
-  ...
+  prop: val;
 }
+
+/* heading3 module */
+
 .heading3 {
-  ...
+  prop: val;
 }
-.heading4 {
-  ...
+  .heading3 span {
+    prop: val;
+  }
+
+/* heading4 module */
+
+.heading4{
+  prop: val;
 }
+  .heading4 .sub {
+    prop: val;
+  }
+  .heading4 .sub a {
+    prop: val;
+  }
 ```
 
 レゴの部品: CSS Object
