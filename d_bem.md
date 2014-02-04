@@ -30,7 +30,7 @@ Block・Elementを変更する追加クラス
 * Yandex
 * ツールを含めてBEMと言うこともある
 * 設計の考え方
-* 厳格なクラスの付け方
+* クラス名の命名規則（厳格）
 
 ----
 
@@ -254,3 +254,45 @@ Block・Elementを変更する追加クラス
 * 命名ルールを統一すべし
 
 そうすれば色々うまくいく
+
+----
+
+## MindBEMding
+
+* [CSS Wizardry - MindBEMding](htp://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
+* もうちょっとだけ単純なやつ
+* 心はBEM
+
+---
+
+```
+.block {}
+.block__element {}
+.block--modifier {}
+```
+
+```
+.site-search {} /* Block */
+.site-search__field {} /* Element */
+.site-search--full {} /* Modifier */
+```
+
+---
+
+```
+.person {}
+.person__hand {}
+.person--female {}
+.person--female__hand {}
+.person__hand--left {}
+```
+
+```
+.person {}
+.hand {}
+.female {}
+.female-hand {}
+.left-hand {}
+```
+

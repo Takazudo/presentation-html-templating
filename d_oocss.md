@@ -107,18 +107,6 @@
   .heading3 span {
     prop: val;
   }
-
-/* heading4 module */
-
-.heading4{
-  prop: val;
-}
-  .heading4 .sub {
-    prop: val;
-  }
-  .heading4 .sub a {
-    prop: val;
-  }
 ```
 
 レゴの部品: CSS Object

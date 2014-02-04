@@ -2,7 +2,7 @@
 
 ----
 
-## @extend
+## `@extend`
 
 <div class="my-img"><img src="img/oocss-skin/2.png" alt=""></div>
 
@@ -92,7 +92,7 @@ Modifier → マルチクラス
 
 ---
 
-### @extendのすごい点
+### `@extend`のすごい点
 
 * スキンのような概念を表現する方法が無かった
 * マルチクラスを利用するしか無かった

@@ -245,7 +245,7 @@ th, td {
 
 ---
 
-<div class="my-img"><img src="img/smacss-exp/layout2.png" alt=""></div>
+<div class="my-img"><img src="img/smacss-exp/layout2ex.png" alt=""></div>
 
 ---
 
