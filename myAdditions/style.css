@@ -1,3 +1,9 @@
+::selection {
+	background: blue;
+	color: #fff;
+	text-shadow: none;
+}
+
 .reveal .slides>section,
 .reveal .slides>section>section {
   padding:0;
