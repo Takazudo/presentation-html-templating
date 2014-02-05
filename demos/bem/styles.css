@@ -11,7 +11,7 @@
   .column__bd {
     padding:1em 20px 0;
   }
-    .column__bd__p {
+    .column__p {
       margin:0;
       padding:0 0 1em;
     }
@@ -32,10 +32,10 @@
   }
   .graph__bd {
   }
-    .graph__bd__img {
+    .graph__img {
       border:2px solid #000;
     }
-    .graph__bd__img_type_important {
+    .graph__img_type_important {
       border-color:red;
     }
   .graph__ft {
@@ -57,16 +57,16 @@
     overflow:hidden;
     *zoom:1; /* ie */
   }
-    .img-column__bd__img-container {
+    .img-column__img-container {
       float:right;
       padding:0 0 1em 20px;
       width:134px;
     }
-    .img-column__bd__text {
+    .img-column__text {
       overflow:hidden;
       *zoom:1; /* ie */
     }
-      .img-column__bd__text__p {
+      .img-column__p {
         margin:0;
         padding:0 0 1em;
       }

@@ -2,6 +2,16 @@
 
 ----
 
+## BEMとは
+
+* 設計や実装の方法論のひとつ
+* Yandex
+* ツールを含めてBEMと言うこともある
+* 設計の考え方
+* クラス名の命名規則（厳格）
+
+---
+
 <ul class="bigList">
 <li><strong>B</strong>lock</li>
 <li><strong>E</strong>lement</li>
@@ -21,16 +31,6 @@ Blockを構成するパーツの単位
 ### Modifier
 
 Block・Elementを変更する追加クラス
-
----
-
-## BEMとは
-
-* 設計や実装の方法論のひとつ
-* Yandex
-* ツールを含めてBEMと言うこともある
-* 設計の考え方
-* クラス名の命名規則（厳格）
 
 ----
 
@@ -92,8 +92,8 @@ Block・Elementを変更する追加クラス
 <section class="column">
   <h1 class="column__hd">About BEM</h1>
   <div class="column__bd">
-    <p class="column__bd__p">The quick brown...</p>
-    <p class="column__bd__p">The quick brown...</p>
+    <p class="column__p">The quick brown...</p>
+    <p class="column__p">The quick brown...</p>
   </div>
 </section>
 ```
@@ -114,7 +114,7 @@ Block・Elementを変更する追加クラス
   .column__bd {
     padding:1em 20px 0;
   }
-    .column__bd__p {
+    .column__p {
       margin:0;
       padding:0 0 1em;
     }
@@ -175,14 +175,13 @@ Block・Elementを変更する追加クラス
 ---
 
 <p style="font-size:1.5em; padding-bottom:.25em"><code>block\_\_element</code></p>
-<p style="font-size:1.5em; padding-bottom:.25em"><code>block\_\_element\_\_element</code></p>
 
 ```
 <section class="column">
   <h1 class="column__hd">About BEM</h1>
   <div class="column__bd">
-    <p class="column__bd__p">The quick brown...</p>
-    <p class="column__bd__p">The quick brown...</p>
+    <p class="column__p">The quick brown...</p>
+    <p class="column__p">The quick brown...</p>
   </div>
 </section>
 ```
@@ -204,15 +203,15 @@ Block・Elementを変更する追加クラス
 
 ---
 
-<p style="font-size:1.5em; padding-bottom:.25em"><code>...element\_key\_value</code></p>
+<p style="font-size:1.5em; padding-bottom:.25em"><code>block\_\_element\_key\_value</code></p>
 
 <div class="my-img"><img src="img/bem-exp/mod-exp3.png" alt=""></div>
 
 ```
-.graph__bd__img {
+.graph__img {
   border: 2px solid #000;
 }
-.graph__bd__img_type_important {
+.graph__img_type_important {
   border-color: red;
 }
 ```
@@ -226,7 +225,7 @@ Block・Elementを変更する追加クラス
   border:2px solid #000;
   border-radius:10px;
 }
-  .img-column__bd__img-container {
+  .img-column__img-container {
     float:right;
     padding:0 0 1em 20px;
     width:134px;
@@ -260,7 +259,7 @@ Block・Elementを変更する追加クラス
 ## MindBEMding
 
 * [CSS Wizardry - MindBEMding](htp://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
+* 意味: ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
 * もうちょっとだけ単純なやつ
 * 心はBEM
 
