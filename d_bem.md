@@ -259,7 +259,7 @@ Block・Elementを変更する追加クラス
 ## MindBEMding
 
 * [CSS Wizardry - MindBEMding](htp://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* 意味: ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
+* mind-bending: ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
 * もうちょっとだけ単純なやつ
 * 心はBEM
 
