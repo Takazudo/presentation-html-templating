@@ -36,13 +36,13 @@ by BEM
 
 ### CSS関する過去配信シリーズ
 
-* CSSの設計
 * SassとCSS設計
 * BEMによるフロントエンドの設計
 * SMACSSによるCSSの設計
 * RWDに効くCSSテクニック
 * 賢く使うStyleDocco導入ガイド
 * 生きたスタイルガイドのためのKSS
+* Compassで簡単、CSSスプライト作成
 
 などなど
 
