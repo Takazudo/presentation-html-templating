@@ -2,16 +2,16 @@
   border:2px solid #000;
   border-radius:10px;
 }
-  .column-hd {
+  .column-head {
     border-bottom:2px solid #000;
     padding:.8em 20px .7em;
     margin:0;
     font-size:1.4em;
   }
-  .column-bd {
+  .column-body {
     padding:1em 20px 0;
   }
-    .column-bd > p {
+    .column-body > p {
       margin:0;
       padding:0 0 1em;
     }
@@ -27,13 +27,13 @@
 .graph {
   text-align:center;
 }
-  .graph-hd {
+  .graph-head {
     font-weight:bold;
   }
-  .graph-bd img {
+  .graph-body img {
     border:2px solid #000;
   }
-  .graph-ft {
+  .graph-foot {
     font-size:.8em;
   }
 
@@ -41,13 +41,13 @@
   border:2px solid #000;
   border-radius:10px;
 }
-  .imgcolumn-hd {
+  .imgcolumn-head {
     border-bottom:2px solid #000;
     padding:.8em 20px .7em;
     margin:0;
     font-size:1.4em;
   }
-  .imgcolumn-bd {
+  .imgcolumn-body {
     padding:1em 20px 0;
     overflow:hidden;
     *zoom:1; /* ie */

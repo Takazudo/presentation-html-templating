@@ -8,7 +8,6 @@
 * スケールできてモジュールなCSS設計
 * Jonathan Snookがオススメする設計方法
 * カッチリした決まりというわけではない
-* 考え方＋（ちょっと）命名規則
 
 ----
 
@@ -34,7 +33,7 @@ CSSルールを次の5つに分けて考える
 
 サイトのデフォルトスタイルを定義する
 
-* reset CSS / normalize CSS
+* Reset CSS / Normalize.css
 * ＋ベースとしたいスタイル
 
 ---
@@ -221,7 +220,7 @@ th, td {
 ### Layout - レイアウトルール
 
 * サイトレイアウトの枠組み
-* 及びそれを調節するための仕組み
+* およびそれを調節するための仕組み
 * 段組
 * `layout-XXXXX`
 * `l-XXXXX`
@@ -316,8 +315,8 @@ th, td {
 
 ```
 <section class="column">
-  <h1 class="column-hd">About SMACSS</h1>
-  <div class="column-bd">
+  <h1 class="column-head">About SMACSS</h1>
+  <div class="column-body">
     <p>The quick brown...</p>
     <p>The quick brown...</p>
   </div>
@@ -331,16 +330,16 @@ th, td {
   border:2px solid #000;
   border-radius:10px;
 }
-  .column-hd {
+  .column-head {
     border-bottom:2px solid #000;
     padding:.8em 20px .7em;
     margin:0;
     font-size:1.4em;
   }
-  .column-bd {
+  .column-body {
     padding:1em 20px 0;
   }
-    .column-bd > p {
+    .column-body > p {
       margin:0;
       padding:0 0 1em;
     }
@@ -380,6 +379,8 @@ th, td {
   opacity:.3;
 }
 ```
+
+追加クラスで状態を表現
 
 ----
 

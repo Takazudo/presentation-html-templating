@@ -5,7 +5,7 @@
 ## OOCSSとは
 
 * Object Oriented CSS
-* Nicole Sullivan (YAHOO!)
+* Nicole Sullivan (Yahoo!)
 * オブジェクト指向っぽく考えて整理しよう
 * レゴみたいに組み合わせてページをつくろう
 
@@ -18,6 +18,8 @@
 <div class="my-img"><img src="img/oocss-module/1.png" alt=""></div>
 
 ---
+
+<div class="my-img"><img src="img/oocss-module/1.png" alt="" width="300"></div>
 
 ```
 #main h2 {
@@ -218,201 +220,6 @@
   vertical-align:-2px;
   margin:0 6px 0 0;
 }
-```
-
-----
-
-![](img/oocss-media/media1.png)
-
----
-
-![](img/oocss-media/media2.png)
-
----
-
-![](img/oocss-media/media3.png)
-
----
-
-<table>
-<tr><th>media</th><td><img src="img/oocss-media/media-base.png" alt=""></td></tr>
-</table>
-
----
-
-<table>
-<tr><th>comment-lv1</th><td><img src="img/oocss-media/media-lv1.png" alt=""></td></tr>
-<tr><th>comment-lv2</th><td><img src="img/oocss-media/media-lv2.png" alt=""></td></tr>
-<tr><th>comment-lv3</th><td><img src="img/oocss-media/media-lv3.png" alt=""></td></tr>
-</table>
-
----
-
-![](img/oocss-media/exp-media1.png)
-
----
-
-![](img/oocss-media/exp-media2.png)
-
----
-
-![](img/oocss-media/exp-media3.png)
-
----
-
-```
-<div class="media">
-  <a href="#" class="img"><img src="..." alt=""></a>
-  <div class="bd">
-    <div class="txt">Hello...</div>
-    <div class="info"><a href="#">@Takazudo</a> [2014/01/31]</div>
-  </div>
-</div>
-```
-
-```
-<div class="media comment-lv1">
-  ...
-</div>
-```
-
-```
-<div class="media comment-lv2">
-  ...
-</div>
-```
-
-```
-<div class="media comment-lv3">
-  ...
-</div>
-```
-
----
-
-### media 
-
-<div class="my-img"><img src="img/oocss-media/objexp-base.png" alt=""></div>
-
----
-
-```
-<div class="media">
-  <a href="#" class="img"><img src="..." alt=""></a>
-  <div class="bd">
-    <div class="txt">Hello...</div>
-    <div class="info"><a href="#">@Takazudo</a> [2014/01/31]</div>
-  </div>
-</div>
-```
-
-```
-.media {
-}
-  .media > .img {
-    float:left;
-  }
-    .media > .img img {
-      border:4px solid #333;
-    }
-  .media > .bd {
-    padding-left:10px;
-    overflow:hidden;
-    *zoom:1; /* ie */
-  }
-    .media > .bd > .txt{
-    }
-    .media > .bd > .info{
-      font-size:.8em;
-      padding:1em 0 0;
-    }
-```
-
-
----
-
-### comment-lv1 
-
-<div class="my-img"><img src="img/oocss-media/objexp-lv1.png" alt=""></div>
-
----
-
-```
-<div class="media comment-lv1">
-  ...
-</div>
-```
-
-```
-.comment-lv1 {
-  border-bottom:2px dashed #333;
-  padding-bottom:1.5em;
-  margin-bottom:1.5em;
-}
-  .comment-lv1 > .img img {
-    width:80px;
-    height:80px;
-  }
-```
-
----
-
-### comment-lv2 
-
-<div class="my-img"><img src="img/oocss-media/objexp-lv2.png" alt=""></div>
-
----
-
-```
-<div class="media comment-lv2">
-  ...
-</div>
-```
-
-```
-.comment-lv2 {
-  margin-top:1em;
-  margin-bottom:0;
-  padding-top:1em;
-  padding-bottom:0;
-  border-top:1px dashed #333;
-}
-  .comment-lv2 > .img img {
-    width:50px;
-    height:50px;
-  }
-  .comment-lv2 > .bd > .txt{
-    font-size:.8em;
-  }
-```
-
----
-
-### comment-lv3 
-
-<div class="my-img"><img src="img/oocss-media/objexp-lv3.png" alt=""></div>
-
----
-
-```
-<div class="media comment-lv3">
-  ...
-</div>
-```
-
-```
-.comment-lv3 {
-  margin-top:1em;
-  padding-top:1em;
-  border-top:1px dashed #333;
-}
-  .comment-lv3 > .img img {
-    width:50px;
-    height:50px;
-  }
-  .comment-lv3 > .bd > .txt{
-    font-size:.75em;
-  }
 ```
 
 ----

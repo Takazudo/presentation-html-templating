@@ -4,11 +4,10 @@
 
 ## BEMとは
 
-* 設計や実装の方法論のひとつ
 * Yandex
-* ツールを含めてBEMと言うこともある
-* 設計の考え方
+* 設計や実装の方法論のひとつ
 * クラス名の命名規則（厳格）
+* ツールを含めてBEMと言うこともある
 
 ---
 
@@ -90,8 +89,8 @@ Block・Elementを変更する追加クラス
 
 ```
 <section class="column">
-  <h1 class="column__hd">About BEM</h1>
-  <div class="column__bd">
+  <h1 class="column__head">About BEM</h1>
+  <div class="column__body">
     <p class="column__p">The quick brown...</p>
     <p class="column__p">The quick brown...</p>
   </div>
@@ -105,13 +104,13 @@ Block・Elementを変更する追加クラス
   border:2px solid #000;
   border-radius:10px;
 }
-  .column__hd {
+  .column__head {
     border-bottom:2px solid #000;
     padding:.8em 20px .7em;
     margin:0;
     font-size:1.4em;
   }
-  .column__bd {
+  .column__body {
     padding:1em 20px 0;
   }
     .column__p {
@@ -162,8 +161,8 @@ Block・Elementを変更する追加クラス
 
 ## Modifierの使いドコロ
 
-* JavaScript等で状態を変化させる時
-* OOCSSのスキン的な使い方
+* JavaScript等で状態を変化させるとき
+* 一つのBlock（かElement）の変化した<br>パターンを作りたいとき
 
 ----
 
@@ -178,8 +177,8 @@ Block・Elementを変更する追加クラス
 
 ```
 <section class="column">
-  <h1 class="column__hd">About BEM</h1>
-  <div class="column__bd">
+  <h1 class="column__head">About BEM</h1>
+  <div class="column__body">
     <p class="column__p">The quick brown...</p>
     <p class="column__p">The quick brown...</p>
   </div>
@@ -252,46 +251,5 @@ Block・Elementを変更する追加クラス
 * 設計思想を統一すべし
 * 命名ルールを統一すべし
 
-そうすれば色々うまくいく
-
-----
-
-## MindBEMding
-
-* [CSS Wizardry - MindBEMding](htp://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* mind-bending: ショッキングな、ドキッとさせる、<br>圧倒的な、幻覚性の、精神に変調を起こさせる
-* もうちょっとだけ単純なやつ
-* 心はBEM
-
----
-
-```
-.block {}
-.block__element {}
-.block--modifier {}
-```
-
-```
-.site-search {} /* Block */
-.site-search__field {} /* Element */
-.site-search--full {} /* Modifier */
-```
-
----
-
-```
-.person {}
-.person__hand {}
-.person--female {}
-.person--female__hand {}
-.person__hand--left {}
-```
-
-```
-.person {}
-.hand {}
-.female {}
-.female-hand {}
-.left-hand {}
-```
+そうすればいろいろうまくいく
 
