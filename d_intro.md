@@ -1,3 +1,7 @@
+<div class="my-img"><img src="img/cover.png" alt=""></div>
+
+----
+
 # HTMLテンプレートの設計
 
 高津戸 壮 \[[@Takazudo](https://twitter.com/Takazudo)\]
